@@ -1,4 +1,4 @@
-package com.example.stringreducto.ui.theme
+package com.example.stringreducto.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
