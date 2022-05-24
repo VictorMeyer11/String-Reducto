@@ -1,8 +1,5 @@
 package com.example.stringreducto.domain.use_case
 
-import java.util.stream.IntStream.range
-
-
 class ReduceWord {
     operator fun invoke(word: String): String {
         val missingLetter: (String) -> Char = { letters ->
@@ -16,15 +13,16 @@ class ReduceWord {
         
         do {
             currentWord = reducedWord
-            for(i in 0..currentWord.length) {
+            for(i in 0.until(currentWord.length-1)) {
                 val currentLetter = currentWord[i]
                 val nextLetter = currentWord[i+1]
-                val letters = "$currentLetter + $nextLetter"
+                val letters = "$currentLetter$nextLetter"
                 
                 if(currentLetter != nextLetter) {
                     reducedWord = currentWord.replaceFirst(
                         letters, 
-                        "${missingLetter(letters)}")
+                        "${missingLetter(letters)}"
+                    )
                     break
                 }
             }
