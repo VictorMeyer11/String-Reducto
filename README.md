@@ -9,9 +9,7 @@
    O programa deve ser capaz de receber diferentes inputs de string, checar se o input é válido e então realizar o processo.
    
    Exemplos: abc -> cc,
-   
              bbca -> baa -> ca -> b,
-             
              aabc -> acc -> bc -> a
   
  - Executável em Android Studio, simplesmente rodando "app" na IDE por um emulador ou por um dispositivo android.
