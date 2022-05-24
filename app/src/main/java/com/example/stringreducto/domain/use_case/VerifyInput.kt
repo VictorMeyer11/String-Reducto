@@ -2,7 +2,9 @@ package com.example.stringreducto.domain.use_case
 
 class VerifyInput {
     operator fun invoke(input: String): Boolean {
-        if(input.matches("[abc]".toRegex())) return true
-        return false
+        input.forEach { letter ->
+            if(letter != 'a' && letter != 'b' && letter != 'c') return false
+        }
+        return true
     }
 }
